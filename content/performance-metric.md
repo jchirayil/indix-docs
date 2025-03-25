@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # Performance Metrics
 
 Performance metrics measure the speed, efficiency, and stability of your software.

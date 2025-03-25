@@ -1,3 +1,6 @@
+---
+comments: true
+---
 # Code Quality Metrics
 
 Code quality metrics help ensure the maintainability, reliability, and robustness of your software.

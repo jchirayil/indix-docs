@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # Project Management Metrics
 
 Project management metrics are essential for tracking progress, identifying bottlenecks, and ensuring projects stay on schedule and within budget.

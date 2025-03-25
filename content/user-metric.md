@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # User Metrics
 
 User metrics help understand how users interact with your software and their overall satisfaction.

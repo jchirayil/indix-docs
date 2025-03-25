@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # Testing Metrics
 
 Testing metrics provide insights into the effectiveness and efficiency of your testing processes.
