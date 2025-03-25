@@ -1,8 +1,17 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://jchirayil.github.io/'
 languageCode = 'en-us'
-title = 'Alpha Beta Gama'
+title = 'Indix-Docs'
+copyright = "(c) 2025 - Indix Docs. All rights reserved."
 theme = "PaperMod"
 [caches]
     [caches.images]
         dir = ':cacheDir/images'
-    
+[menus]
+    [[menus.main]]
+        name = "Home"
+        pageRef = "/"
+        weight = 10
+    [[menus.main]]
+        name = "About"
+        pageRef = "/about"
+        weight = 20
