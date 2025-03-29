@@ -12,6 +12,10 @@ theme = "PaperMod"
         pageRef = "/"
         weight = 10
     [[menus.main]]
+        name = "Suggest"
+        pageRef = "/suggest"
+        weight = 20
+    [[menus.main]]
         name = "About"
         pageRef = "/about"
         weight = 20

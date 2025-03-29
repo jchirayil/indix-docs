@@ -1,0 +1,12 @@
+<p>Use the form below to suggest a new page or suggest improvements to an existing page.</p>
+<form action="https://github.com/jchirayil/indix-docs/issues/new" method="GET">
+    <label for="title">Title:</label><br>
+    <input type="text" id="title" name="title" required><br><br>
+    <label for="body">Content:</label><br>
+    <textarea id="body" name="body" rows="4" cols="50" required></textarea><br><br>
+    <button type="submit">Submit Suggestion</button>
+  </form>
+<p>Thank you for your contribution!</p>
+{{ $css := resources.Get "css/form.css" }}
+{{ $css = $css.Permalink }}
+<link href="{{ $css }}" rel="stylesheet">
