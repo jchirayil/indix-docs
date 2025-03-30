@@ -19,3 +19,5 @@ theme = "PaperMod"
         name = "About"
         pageRef = "/about"
         weight = 20
+[params]
+    hugo_github_token = "" # Leave empty, to be set at build time
