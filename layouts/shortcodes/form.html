@@ -1,77 +1,77 @@
 <div id="issue-new">
-<p>Use the form below to suggest a new page or suggest improvements to an existing page.</p>
-<form action="https://github.com/jchirayil/indix-docs/issues/new" method="GET">
-    <label for="title">Title:</label><br>
-    <input type="text" id="title" name="title" required><br><br>
-    <label for="body">Content:</label><br>
-    <textarea id="body" name="body" rows="4" cols="50" required></textarea><br><br>
-    <button type="submit">Submit Suggestion</button>
-  </form>
-<p>Thank you for your contribution!</p>
+    <p>Use the form below to suggest a new page or suggest improvements to an existing page.</p>
+    <form action="https://github.com/jchirayil/indix-docs/issues/new" method="GET">
+        <label for="title">Title:</label><br>
+        <input type="text" id="title" name="title" required><br><br>
+        <label for="body">Content:</label><br>
+        <textarea id="body" name="body" rows="4" cols="50" required></textarea><br><br>
+        <button type="submit">Submit Suggestion</button>
+    </form>
+    <p>Thank you for your contribution!</p>
 </div>
 <div>
-    <p>Here's a list of open issues in our GitHub repository.  You can click on the title to see the full issue on GitHub.</p>
+    <p>Here's a list of open issues in our GitHub repository. You can click on the title to see the full issue on
+        GitHub.</p>
+    <div id="open-issues-list">
+        <p>Loading issues...</p>
+    </div>
 
-<div id="open-issues-list">
-    <p>Loading issues...</p>
-</div>
+    <script>
+        const issuesList = document.getElementById('open-issues-list');
+        const owner = 'jchirayil';  // Replace
+        const repo = 'indix-docs';     // Replace
+        const GITHUB_TOKEN = "{{ .Site.Params.github_token }}"; //  Replace, ideally load from an env variable
 
-<script>
-const issuesList = document.getElementById('open-issues-list');
-const owner = 'jchirayil';  // Replace
-const repo = 'indix-docs';     // Replace
-const GITHUB_TOKEN = "{{ .Site.Params.github_token }}"; //  Replace, ideally load from an env variable
+        async function fetchOpenIssues() {
+            let url = `https://api.github.com/repos/${owner}/${repo}/issues?state=open`;
+            const headers = {
+                'Accept': 'application/vnd.github.v3+json'
+            };
 
-async function fetchOpenIssues() {
-    let url = `https://api.github.com/repos/<span class="math-inline">\{owner\}/</span>{repo}/issues?state=open`;
-    const headers = {
-        'Accept': 'application/vnd.github.v3+json'
-    };
+            if (GITHUB_TOKEN) {
+                headers['Authorization'] = `token ${GITHUB_TOKEN}`;
+            }
+            try {
+                const response = await fetch(url, {
+                    method: 'GET',
+                    headers: headers
+                });
 
-    if (GITHUB_TOKEN) {
-        headers['Authorization'] = `token ${GITHUB_TOKEN}`;
-    }
-    try {
-        const response = await fetch(url, {
-            method: 'GET',
-            headers: headers
-        });
+                if (!response.ok) {
+                    throw new Error(`Failed to fetch issues: ${response.status} ${response.statusText}`);
+                }
 
-        if (!response.ok) {
-            throw new Error(`Failed to fetch issues: ${response.status} ${response.statusText}`);
+                const issues = await response.json();
+                displayIssues(issues);
+            } catch (error) {
+                issuesList.innerHTML = `<p class="error">Error: ${error.message}</p>`;
+                console.error('Error fetching GitHub issues:', error);
+            }
         }
 
-        const issues = await response.json();
-        displayIssues(issues);
-    } catch (error) {
-        issuesList.innerHTML = `<p class="error">Error: ${error.message}</p>`;
-        console.error('Error fetching GitHub issues:', error);
-    }
-}
+        function displayIssues(issues) {
+            if (issues.length === 0) {
+                issuesList.innerHTML = '<p>No open issues found.</p>';
+                return;
+            }
 
-function displayIssues(issues) {
-    if (issues.length === 0) {
-        issuesList.innerHTML = '<p>No open issues found.</p>';
-        return;
-    }
-
-    let html = '<ul>';
-    issues.forEach(issue => {
-        html += `
+            let html = '<ul>';
+            issues.forEach(issue => {
+                html += `
       <li>
-        <a href="<span class="math-inline">\{issue\.html\_url\}" target\="\_blank" rel\="noopener noreferrer"\></span>{issue.title}</a>
+        <a href="${issue.html_url}" target="_blank" rel="noopener noreferrer">${issue.title}</a>
         <p>Created by: ${issue.user.login} on ${new Date(issue.created_at).toLocaleDateString()}</p>
         <p>Labels: ${issue.labels.map(label => `<span class="label" style="background-color: #${label.color}">${label.name}</span>`).join(', ') || 'None'}</p>
         <p>Comments: ${issue.comments}</p>
       </li>
         `;
-    });
-    html += '</ul>';
-    issuesList.innerHTML = html;
-}
+            });
+            html += '</ul>';
+            issuesList.innerHTML = html;
+        }
 
-fetchOpenIssues();
-</script>
+        fetchOpenIssues();
+    </script>
 </div>
 {{ $css := resources.Get "css/form.css" }}
 {{ $css = $css.Permalink }}
