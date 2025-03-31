@@ -1,3 +1,8 @@
+---
+title: Home
+summary: Welcome to KPI/OKR Docs Page
+description: This documentation provides comprehensive information on key performance indicators (KPIs) and objectives and key results (OKRs) commonly used in software engineering projects. It aims to serve as a resource for teams looking to improve their development processes, code quality, and overall project success.
+---
 # Welcome to KPI/OKR Docs
 
 This documentation provides comprehensive information on key performance indicators (KPIs) and objectives and key results (OKRs) commonly used in software engineering projects. It aims to serve as a resource for teams looking to improve their development processes, code quality, and overall project success.

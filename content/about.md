@@ -1,3 +1,8 @@
+---
+title: About Page
+summary: More about this project
+description: This project is a documentation website built using Hugo, a static site generator. The content is written in Markdown, and the project is managed using Git, often with a platform like GitHub, GitLab, or Bitbucket. This document will help you understand how the project is structured, how to contribute, and how to see your changes live.
+---
 # About This Project
 
 This project is a documentation website built using [Hugo](https://gohugo.io/), a static site generator. The content is written in [Markdown](https://www.markdownguide.org/), and the project is managed using [Git](https://git-scm.com/), often with a platform like [GitHub](https://github.com/), [GitLab](https://about.gitlab.com/), or [Bitbucket](https://bitbucket.org/). This document will help you understand how the project is structured, how to contribute, and how to ***see your changes live***.

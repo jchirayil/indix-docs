@@ -12,6 +12,10 @@ theme = "PaperMod"
         pageRef = "/"
         weight = 10
     [[menus.main]]
+        name = "Search"
+        pageRef = "/search"
+        weight = 10
+    [[menus.main]]
         name = "Suggest"
         pageRef = "/suggest"
         weight = 20
@@ -21,3 +25,5 @@ theme = "PaperMod"
         weight = 20
 [params]
     hugo_github_token = "" # Leave empty, to be set at build time
+[outputs]
+    home = ["HTML", "JSON"]

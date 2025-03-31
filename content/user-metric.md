@@ -1,4 +1,7 @@
 ---
+title: User Metrics
+summary: More about the metrics related the user behavior
+description: User metrics help understand how users interact with your software and their overall satisfaction.
 comments: true
 ---
 

@@ -1,4 +1,7 @@
 ---
+title: Code Quality Metrics
+summary: More about metrics related to the quality of the code
+description: Code quality metrics help ensure the maintainability, reliability, and robustness of your software.
 comments: true
 ---
 # Code Quality Metrics

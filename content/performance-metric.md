@@ -1,4 +1,7 @@
 ---
+title: Performance Metrics
+summary: More about the metrics related the performance of the project/product
+description: Performance metrics measure the speed, efficiency, and stability of your software.
 comments: true
 ---
 
