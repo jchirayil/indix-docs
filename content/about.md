@@ -1,6 +1,6 @@
 # About This Project
 
-This project is a documentation website built using [Hugo](https://gohugo.io/), a static site generator. The content is written in [Markdown](https://www.markdownguide.org/), and the project is managed using [Git](https://git-scm.com/), often with a platform like [GitHub](https://github.com/), [GitLab](https://about.gitlab.com/), or [Bitbucket](https://bitbucket.org/). This document will help you understand how the project is structured, how to contribute, and how to see your changes live.
+This project is a documentation website built using [Hugo](https://gohugo.io/), a static site generator. The content is written in [Markdown](https://www.markdownguide.org/), and the project is managed using [Git](https://git-scm.com/), often with a platform like [GitHub](https://github.com/), [GitLab](https://about.gitlab.com/), or [Bitbucket](https://bitbucket.org/). This document will help you understand how the project is structured, how to contribute, and how to ***see your changes live***.
 
 ## Project Structure
 
