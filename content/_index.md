@@ -47,6 +47,13 @@ This documentation provides comprehensive information on key performance indicat
 * **[Feature Usage](user-metric#feature-usage)**: Measures usage of specific features.
 * **[User Retention](user-metric#user-retention)**: Measures user retention over time.
 
+## Startup KPI
+
+* **[Runway](startup-kpi#runway)**: Number of months a startup can operate before running out of cash.
+* **[Monthly Recurring Revenue (MRR)](startup-kpi#monthly-recurring-revenue-mrr)**: Predictable subscription-based revenue each month.
+* **[Activation Rate](startup-kpi#activation-rate)**: Percentage of users complete onboarding process.
+* **[Monthly Burn](startup-kpi#monthly-burn)**: Amount of cash spent per month.
+
 ---
 
 This is a sample document. We hope you find this documentation helpful.
